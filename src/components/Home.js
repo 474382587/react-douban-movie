@@ -3,6 +3,7 @@ import Header from './Header'
 import ItemList from './ItemList'
 import Axios from 'axios'
 import Loader from './Loader'
+import Title from './Title';
 
 class Home extends React.Component {
   // state
@@ -15,7 +16,12 @@ class Home extends React.Component {
   }
   // search button
   handleClick = () => {
-    this.props.history.push('/search/' + this.state.keywords)
+    if (this.state.keywords.trim()){
+      this.props.history.push('/search/' + this.state.keywords)
+    }
+    else{
+      alert('请输入关键字')
+    }
   }
 
   // sync user input
@@ -146,14 +152,13 @@ class Home extends React.Component {
   }
   // render jsx
   render() {
-    return (
-      <div>
+    return <div>
         <Header handleInput={this.handleInput} handleClick={this.handleClick} />
+        <Title title="豆瓣电影 Top250" />
         <ItemList itemList={this.state.itemList} title="豆瓣电影 Top250" />
         {!this.state.completeLoading && <Loader />}
         {this.state.allLoaded && <div className="end">到底了朋友</div>}
       </div>
-    )
   }
 }
 

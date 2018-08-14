@@ -3,16 +3,6 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  .title {
-    width: 100%;
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-    font-family: 'Arial', 'FangSong', 'Microsoft YaHei', '黑体', '宋体',
-      sans-serif;
-    padding: 1rem 0;
-    border-bottom: 1px solid #e3e3e3;
-  }
   .movie-item {
     text-decoration: none;
     color: black;
