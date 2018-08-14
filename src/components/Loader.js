@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default Loader = () => {
+const Loader = () => {
   return (
-    <div>
-      
+    <div className="container">
+      <div className="move-box">加载中...</div>
     </div>
   )
 }
+
+export default Loader
