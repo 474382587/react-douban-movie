@@ -17,20 +17,21 @@ class Detail extends React.Component {
     this.getData()
   }
   getData() {
-    const buildUrl = 'https://cors-anywhere.herokuapp.com/http://api.douban.com/v2/movie/subject/'
+    const buildUrl = 'https://cors-anywhere.herokuapp.com/http://api.douban.com/v2/movie/subject/' + this.props.match.params.id
     const devUrl = ''
     
     console.log('Going to get data from test JSON file * * * ')
-    Axios.get('/detail.json').then(res => {
+    Axios.get(buildUrl).then(res => {
       this.setState(() => {
-        return {
-          title: res.data.title,
-          directors: res.data.directors.map(e => e.name).join('，'),
-          casts: res.data.casts.map(e => e.name).join('，'),
-          intro: res.data.summary,
-          image: res.data.images.small,
-          completed: true
-        }
+        return { title: res.data.title, directors: res.data.directors
+            .map(e => e.name)
+            .join(
+              '，'
+            ), casts: res.data.casts
+            .map(e => e.name)
+            .join(
+              '，'
+            ), intro: res.data.summary, image: res.data.images.small, completed: true }
       })
     })
   }
