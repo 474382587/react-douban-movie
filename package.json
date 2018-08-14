@@ -19,9 +19,16 @@
   },
   "homepage": "https://github.com/jerkjoe/react-douban-movie#readme",
   "dependencies": {
+    "axios": "^0.18.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "sass-loader": "^7.1.0",
+    "scss-loader": "0.0.1",
+    "style-loader": "^0.22.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

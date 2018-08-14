@@ -1,0 +1,49 @@
+.item-list {
+  padding: 0.4rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .title {
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Arial', 'FangSong', 'Microsoft YaHei', '黑体', '宋体',
+      sans-serif;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .movie-item {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    margin: 0.6rem 0.66%;
+    text-align: center;
+    min-width: 30%;
+    max-width: 30%;
+    padding: 1%;
+    background-color: lighten($color: #fefefc, $amount: 10%);
+  }
+  .image-wrapper {
+    width: 100%;
+    height: 76%;
+  }
+  .movie-image {
+    margin-bottom: 0.4rem;
+    width: 100%;
+    height: 100%;
+    max-height: 16rem;
+  }
+  .movie-title {
+    font-family: sans-serif;
+    margin: 0.2rem 0 0;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+}
