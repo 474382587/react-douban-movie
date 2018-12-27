@@ -23,3 +23,5 @@ I used [cross origin anywhere](https://cors-anywhere.herokuapp.com/) to send req
 If that is the case you can simply download this repo and `npm install` --> `npm start` (Note: you need to setup proxy in webpack.config.js though)
 
 Have a nice day!
+
+Contact: jerkjoe61@gmail.com
